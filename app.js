@@ -6,7 +6,6 @@ const fs = require('fs');
 const moment = require('moment');
 const prefix = "/"
 const bot = new Discord.Client();
-const weather = require('weather-js');
 
 require('./util/eventLoader')(client);
 
