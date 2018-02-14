@@ -4,6 +4,11 @@ let member = message.guild.member(message.author.id);
 const millisJoined = new Date().getTime() - member.joinedAt.getTime();
 const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
 const joinedauth = message.guild.member(message.author.id).joinedAt
+const jin1 = message.guild.member(message.author.id).joinedAt[1]
+const jin2 = message.guild.member(message.author.id).joinedAt[2]
+const jin3 = message.guild.member(message.author.id).joinedAt[3]
+const jin4 = message.guild.member(message.author.id).joinedAt[4]
+const jin5 = message.guild.member(message.author.id).joinedAt[5]
 let game = "game"
 if(!message.author.presence.game){
  game = "None"
@@ -31,7 +36,7 @@ if(daysJoined.toFixed(0) === "1"){
 	.addField("Nickname", nickname, true)
 	.addField("Status", message.author.presence.status, true)
 	.addField("Game", game, true)
-	.addField("Joined", message.guild.member(message.author.id).joinedAt, true)
+	.addField("Joined", jin1 + ", " + jin2 + ", " + jin4 + ", " + jin5, true)
 	.addField("Days since joining", daysJoined.toFixed(0) + daysz, true)
 	.addField("Roles", message.guild.member(message.author.id).roles.map(r => r.name).join(", "))
 	.setFooter("Account Created")
