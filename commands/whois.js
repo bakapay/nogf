@@ -59,7 +59,7 @@ if(!message.guild.member(user1.id).nickname){
 }
 
 const millisJoined2 = new Date().getTime() - member2.joinedAt.getTime();
-const daysJoined2 = millisJoined / 1000 / 60 / 60 / 24;
+const daysJoined2 = millisJoined2 / 1000 / 60 / 60 / 24;
 
 let daysz1 = "days"
 if(daysJoined2.toFixed(0) === "1"){
