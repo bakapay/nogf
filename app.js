@@ -30,6 +30,7 @@ guild.createRole({
 let owner = guild.owner
    owner.send("Thanks for adding me to your server. Just a few things to note:\n**1:** The prefix is `ch!`.\n**2:** Commands do not work in DM.")
 console.log("+ " + guild + ".")
+client.guilds.get("411904047797239820").channels.get("413367399690272768").send("New guild - **" + guild + "**. This guild has **" + guild.members.size + "** members.")
    });
 
 
