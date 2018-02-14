@@ -8,7 +8,7 @@ let game;
 if(!message.author.presence.game){
  game = "None"
 } else {
- game = message.author.presence.game.name
+ game = message.author.presence.game
 }
 
 let nickname;
@@ -48,7 +48,7 @@ let game2;
 if(!user1.presence.game){
  game2 = "None"
 } else {
- game = user1.presence.game.name
+ game = user1.presence.game
 }
 
 let nickname2;
