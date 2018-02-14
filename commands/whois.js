@@ -4,11 +4,11 @@ let member = message.guild.member(message.author.id);
 const millisJoined = new Date().getTime() - member.joinedAt.getTime();
 const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
 	
-let game = "game"
+let game = message.author.presence.game.name
 if(!message.author.presence.game){
  game = "None"
 } else {
- game = message.author.presence.game.name.toString()
+ game = message.author.presence.game.name
 }
 
 let nickname = "nickname"
@@ -44,11 +44,11 @@ if(message.mentions.users.size < 1) return message.channel.send(authoru)
 	
 let user1 = message.mentions.users.first();
 let member2 = message.guild.member(user1.id);
-let game2 = "game"
+let game2 = user1.presence.game.name
 if(!user1.presence.game){
  game2 = "None"
 } else {
- game = user1.presence.game.name.toString()
+ game = user1.presence.game.name
 }
 
 let nickname2 = "nickname"
