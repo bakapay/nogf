@@ -5,7 +5,6 @@ const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
 const prefix = "/"
-const db = require('quick.db');
 const bot = new Discord.Client();
 
 require('./util/eventLoader')(client);
