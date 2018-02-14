@@ -8,7 +8,7 @@ let game = "game"
 if(!message.author.presence.game){
  game = "None"
 } else {
- game = message.author.presence.game.name
+ game = message.author.presence.game.name.toString()
 }
 
 let nickname = "nickname"
@@ -48,7 +48,7 @@ let game2 = "game"
 if(!user1.presence.game){
  game2 = "None"
 } else {
- game = user1.presence.game.name
+ game = user1.presence.game.name.toString()
 }
 
 let nickname2 = "nickname"
