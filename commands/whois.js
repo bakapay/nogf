@@ -3,12 +3,7 @@ exports.run = (client, message, args) => {
 let member = message.guild.member(message.author.id);
 const millisJoined = new Date().getTime() - member.joinedAt.getTime();
 const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
-const joinedauth = message.guild.member(message.author.id).joinedAt
-const jin1 = joinedauth[1]
-const jin2 = joinedauth[2]
-const jin3 = joinedauth[3]
-const jin4 = joinedauth[4]
-const jin5 = joinedauth[5]
+	
 let game = "game"
 if(!message.author.presence.game){
  game = "None"
@@ -32,12 +27,13 @@ if(daysJoined.toFixed(0) === "1"){
 	
 	const authoru = new Discord.RichEmbed()
 	.setAuthor(message.author.tag, message.author.avatarURL)
+	.addField("Discriminator", message.author.discriminator, true)
 	.addField("ID", message.author.id, true)
 	.addField("Nickname", nickname, true)
 	.addField("Status", message.author.presence.status, true)
 	.addField("Game", game, true)
-	.addField("Joined", jin1 + ", " + jin2 + ", " + jin4 + ", " + jin5, true)
 	.addField("Days since joining", daysJoined.toFixed(0) + daysz, true)
+	.addField("Joined", message.guild.member(message.author.id).joinedAt, true)
 	.addField("Roles", message.guild.member(message.author.id).roles.map(r => r.name).join(", "))
 	.setFooter("Account Created")
 	.setTimestamp(message.author.createdAt)
@@ -74,12 +70,13 @@ if(daysJoined2.toFixed(0) === "1"){
 
 	const useru = new Discord.RichEmbed()
 	.setAuthor(user1.tag, user1.avatarURL)
+	.addField("Discriminator", user1.discriminator, true)
 	.addField("ID", user1.id, true)
 	.addField("Nickname", nickname2, true)
 	.addField("Status", user1.presence.status, true)
 	.addField("Game", game2, true)
-	.addField("Joined", timestamp(message.guild.member(user1.id).joinedAt), true)
 	.addField("Days since joining", daysJoined2.toFixed(0) + daysz1, true)
+	.addField("Joined", message.guild.member(user1.id).joinedAt, true)
 	.addField("Roles", message.guild.member(user1.id).roles.map(r => r.name).join(", "))
 	.setFooter("Account Created")
 	.setTimestamp(user1.createdAt)
