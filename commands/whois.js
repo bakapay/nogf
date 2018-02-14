@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
 let member = message.guild.member(message.author.id);
 const millisJoined = new Date().getTime() - member.joinedAt.getTime();
 const daysJoined = millisJoined / 1000 / 60 / 60 / 24;
-
+const joinedauth = message.guild.member(message.author.id).joinedAt
 let game = "game"
 if(!message.author.presence.game){
  game = "None"
@@ -31,7 +31,7 @@ if(daysJoined.toFixed(0) === "1"){
 	.addField("Nickname", nickname, true)
 	.addField("Status", message.author.presence.status, true)
 	.addField("Game", game, true)
-	.addField("Joined", timestamp(message.guild.member(message.author.id).joinedAt), true)
+	.addField("Joined", message.guild.member(message.author.id).joinedAt, true)
 	.addField("Days since joining", daysJoined.toFixed(0) + daysz, true)
 	.addField("Roles", message.guild.member(message.author.id).roles.map(r => r.name).join(", "))
 	.setFooter("Account Created")
