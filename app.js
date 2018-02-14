@@ -14,7 +14,7 @@ const log = message => {
 };
 
   client.on(`ready`, member => {
-    client.user.setPresence({game: {name: "with " + client.users.size + " members | hosting soon" , type: 0}});
+    client.user.setPresence({game: {name: "with " + client.users.size + " members | ch!help" , type: 0}});
 });
 
 client.on("ready", () => {
@@ -22,6 +22,7 @@ client.on("ready", () => {
 });
 
 client.on("guildCreate", guild => {
+    client.user.setPresence({game: {name: "with " + client.users.size + " members | ch!help" , type: 0}});
 guild.createRole({
   name: "Muted",
   color: "070707",
@@ -33,6 +34,7 @@ console.log("+ " + guild + ".")
 
 
 client.on("guildDelete", guild => {
+    client.user.setPresence({game: {name: "with " + client.users.size + " members | ch!help" , type: 0}});
 guild.roles.find('name', "Muted").delete()
 console.log("- " + guild + ".")
 });
