@@ -83,4 +83,4 @@ client.elevation = message => {
 };
 
 
-client.login("NDExOTA2MDg3OTA2NzA1NDA4.DWC52w.3LdfaJ0OOS5j59B644iopnye_FQ");
+client.login(process.env.BOT_TOKEN);
