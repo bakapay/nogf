@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 exports.run = (client, message, args) => {
-let xemoji = client.guilds.get("411904047797239820").emojis.find("name", "chromaticX")
-let vemoji = client.guilds.get("411904047797239820").emojis.find("name", "chromaticV")
+let xemoji = client.guilds.get("413684605892165635").emojis.find("name", "abisalX")
+let vemoji = client.guilds.get("413684605892165635").emojis.find("name", "abisalV")
   if(!message.guild.member(message.author.id).hasPermission('MANAGE_ROLES')) return message.channel.send(xemoji + " You don't have the correct permission.")
   let member = message.mentions.members.first();
 
 const k = new Discord.RichEmbed()
-.setAuthor("Command: ch!ban", client.user.avatarURL)
-.setDescription("**Description:** Add a new role, with optional color\n**Usage:** ch!addrole [hex color] [name]\n**Example:** ch!addrole #070707 Chromatic")
+.setAuthor("Command: ab!ban", client.user.avatarURL)
+.setDescription("**Description:** Add a new role, with optional color\n**Usage:** ab!addrole [hex color] [name]\n**Example:** ab!addrole #070707 Abisal")
 .setFooter("Requested by " + message.author.username)
 .setColor(0x070707)
 
