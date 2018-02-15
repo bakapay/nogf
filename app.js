@@ -14,7 +14,7 @@ const log = message => {
 };
 
   client.on(`ready`, member => {
-    client.user.setPresence({game: {name: "with " + client.users.size + " members | ch!help" , type: 0}});
+    client.user.setPresence({game: {name: "with " + client.users.size + " members | ab!help" , type: 0}});
 });
 
 client.on("ready", () => {
@@ -22,20 +22,17 @@ client.on("ready", () => {
 });
 
 client.on("guildCreate", guild => {
-    client.user.setPresence({game: {name: "with " + client.users.size + " members | ch!help" , type: 0}});
 guild.createRole({
   name: "Muted",
   color: "070707",
   })
 let owner = guild.owner
-   owner.send("Thanks for adding me to your server. Just a few things to note:\n**1:** The prefix is `ch!`.\n**2:** Commands do not work in DM.")
+   owner.send("Thanks for adding me to your server. Just a few things to note:\n**1:** The prefix is `ab!`.\n**2:** Commands do not work in DM.")
 console.log("+ " + guild + ".")
-client.guilds.get("411904047797239820").channels.get("413367399690272768").send("New guild - **" + guild + "**. This guild has **" + guild.members.size + "** members.")
    });
 
 
 client.on("guildDelete", guild => {
-    client.user.setPresence({game: {name: "with " + client.users.size + " members | ch!help" , type: 0}});
 guild.roles.find('name', "Muted").delete()
 console.log("- " + guild + ".")
 });
